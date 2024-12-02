@@ -2,11 +2,28 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EvaluacionP2OntanedaT.PrimeraPagina"
-             Title="PrimeraPagina">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             xmlns:models="clr-notespace:EvaluacionP2OntanedaT.Modelo"
+             Title="Recarga Telefónica">
+
+    <StackLayout Margin="20,35,20,25" Spacing="20">
+        <Label Text="Ingrese el número de teléfono:" HorizontalOptions="Center"/>
+        <Editor x:Name="OntanedaTNum"
+                Placeholder="09XXXXXXXX"
+                HeightRequest="100" 
+                WidthRequest="400"/>
+        <Label Text="Ingrese el nombre de quien realiza la recarga:" HorizontalOptions="Center"/>
+        <Editor x:Name="OntanedaTNom"
+                Placeholder="Ingrese el nombre aquí"
+                HeightRequest="100" 
+                WidthRequest="400"/>
+        <VerticalStackLayout Spacing="10" Margin="10">
+            <Label Text="La última recarga realizada fue:" HorizontalOptions="Center"/>
+            <Label x:Name="OntanedaT_labelNumero" Text="{Binding Numero}" HorizontalOptions="Center"/>
+            <Label x:Name="OntanedaT_labelNombre" Text="{Binding Nombre}" HorizontalOptions="Center"/>
+            <Button Text="Recargar"
+                    Clicked="Button_Clicked"
+                    WidthRequest="100"/>
+            
+        </VerticalStackLayout>
+    </StackLayout>
 </ContentPage>

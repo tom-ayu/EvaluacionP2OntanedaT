@@ -4,12 +4,16 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:EvaluacionP2OntanedaT"
-    Shell.FlyoutBehavior="Disabled"
-    Title="EvaluacionP2OntanedaT">
+    Shell.FlyoutBehavior="Flyout"
+    Title="Evaluacion_P2_Tomás_Ontaneda">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Primera Página"
+        ContentTemplate="{DataTemplate local:PrimeraPagina}"
+        Route="PrimeraPagina" />
+    <ShellContent
+        Title="Segunda Página"
+        ContentTemplate="{DataTemplate local:SegundaPagina}"
+        Route="SegundaPagina" />
 
 </Shell>
