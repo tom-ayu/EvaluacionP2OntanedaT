@@ -16,4 +16,11 @@
         ContentTemplate="{DataTemplate local:SegundaPagina}"
         Route="SegundaPagina" />
 
+    <TabBar>
+        <Tab
+        Title="Primera Página" Route="PrimeraPagina"/>
+        <Tab
+        Title="Segunda Página" Route="SegundaPagina" />
+    </TabBar>
+
 </Shell>
